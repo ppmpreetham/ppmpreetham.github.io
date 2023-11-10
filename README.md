@@ -1,1 +1,2 @@
-# preetham-ai.github.io
+## Preetham Pemmasani
+#CG Artist
