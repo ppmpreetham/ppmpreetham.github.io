@@ -1,2 +1,2 @@
 ## Preetham Pemmasani
-#CG Artist
+Hey Cutie! I'm **Preetham**, but I prefer **Panda**.
