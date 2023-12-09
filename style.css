@@ -1,24 +1,32 @@
-body {
-    background-color: #121212;
-    margin: auto;
-    padding: 5cqh;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    color: white;
-}
+
 @font-face {
     font-family: Pilowlava;
     src: url("../public/Fonts/Pilowlava-Regular.otf");
   }
 
-  @font-face {
+@font-face {
     font-family: ArchivGrotesk;
     src: url("../public/Fonts/ArchivGrotesk.otf");
   }
-
+@font-face {
+  font-family: Frakthion;
+  src: url("../public/Fonts/PPFraktionMono-Regular.otf");
+}
+span {
+    font-family: Pilowlava;
+}
+body {
+    background-color: #121212;
+    margin: auto;
+    padding: 5cqh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: white;
+}
 h1 {
-    text-align: center;
+    margin:auto;
+    text-align: left;
+    padding: 64px;
     font-size: 64px;
-    font-family: Pilowlava
+    font-family: Pilowlava;
 }
