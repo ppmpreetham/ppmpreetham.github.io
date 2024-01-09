@@ -12,6 +12,11 @@
   font-family: Frakthion;
   src: url("../public/Fonts/PPFraktionMono-Regular.otf");
 }
+@font-face {
+  font-family: CommitMono;
+  src: url("..\public\Fonts\COMMITMONO-400-REGULAR.OTF");
+}
+
 span {
     font-family: Pilowlava;
 }
@@ -29,4 +34,11 @@ h1 {
     padding: 64px;
     font-size: 64px;
     font-family: Pilowlava;
+}
+p {
+    margin:auto;
+    text-align: left;
+    padding: 64px;
+    font-size: 32px;
+    font-family: CommitMono;
 }
