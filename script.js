@@ -13,7 +13,9 @@ function tick() {
     circle.x += (mouse.x - circle.x) * speed;
     circle.y += (mouse.y - circle.y) * speed;
 
-    circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+    if (circleElement) {
+        circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+    }
     window.requestAnimationFrame(tick);
 }
 

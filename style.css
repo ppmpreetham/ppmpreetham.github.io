@@ -61,13 +61,16 @@ p {
   color: white;
   mix-blend-mode: difference;
 }
-.circle{
+.circle {
   position: fixed;
   width: 40px;
   height: 40px;
+  background: #fff;
   border: 1px solid #fff;
   border-radius: 100%;
   top: -20px;
   left: -20px;
   pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 1;
 }
