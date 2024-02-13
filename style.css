@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: CommitMono;
-  src: url("..\public\Fonts\COMMITMONO-400-REGULAR.OTF");
+  src: url("../public/Fonts/COMMITMONO-400-REGULAR.OTF");
 }
 
 span {
@@ -60,4 +60,14 @@ p {
   text-align: center;
   color: white;
   mix-blend-mode: difference;
+}
+.circle{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  top: -20px;
+  left: -20px;
+  pointer-events: none;
 }

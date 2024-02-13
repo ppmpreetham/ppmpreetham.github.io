@@ -1,2 +1,2 @@
 ## Preetham Pemmasani
-Hey Cutie! I'm **Preetham**, but I prefer **Panda**.
+I'm **Preetham** and this is my website.
