@@ -1,4 +1,6 @@
-
+*{
+  cursor: none;
+}
 @font-face {
     font-family: Pilowlava;
     src: url("../public/Fonts/Pilowlava-Regular.otf");
@@ -72,5 +74,5 @@ p {
   left: -20px;
   pointer-events: none;
   mix-blend-mode: difference;
-  z-index: 1;
+  z-index: 9999;
 }
