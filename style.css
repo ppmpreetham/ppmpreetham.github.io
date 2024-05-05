@@ -76,3 +76,9 @@ p {
   mix-blend-mode: difference;
   z-index: 9999;
 }
+
+@media only screen and (max-width: 600px) {
+  .circle {
+    display: none;
+  }
+}
