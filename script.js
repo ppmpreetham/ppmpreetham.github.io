@@ -1,44 +1,57 @@
-console.clear();
+document.addEventListener("DOMContentLoaded", function() {
+    let lottiecontainer = document.querySelector(".animation");
 
-const circleElement = document.querySelector('.circle');
-
-const mouse = { x: 0, y: 0 }; 
-const previousMouse = { x: 0, y: 0 }
-const circle = { x: 0, y: 0 }; 
-
-let currentScale = 0; 
-let currentAngle = 0;
-
-window.addEventListener('mousemove', (e) => {
-  mouse.x = e.x;
-  mouse.y = e.y;
+    if (lottiecontainer) {
+        LottieScrollTrigger({
+            trigger: ".animation",
+            start: "top center",
+            endTrigger: ".lottie-end",
+            end: `bottom center+=${document.querySelector(".animation").offsetHeight}`,
+            renderer: "svg",
+            target: ".animation",
+            path: './public/media/geo_nodes_lottie.json',
+            scrub: 2,
+        });
+    }
 });
 
-const speed = 0.15;
+function LottieScrollTrigger(vars) {
+    let playhead = { frame: 0 },
+        target = gsap.utils.toArray(vars.target)[0],
+        speeds = { slow: "+=2000", medium: "+=1000", fast: "+=500" },
+        st = {
+          trigger: ".trigger",
+          end: speeds[vars.speed] || "+=1000",
+          scrub: 1,
+          markers: false,
+        },
+        ctx = gsap.context && gsap.context(),
+        animation = lottie.loadAnimation({
+          container: target,
+          renderer: vars.renderer || "svg",
+          loop: false,
+          autoplay: false,
+          path: vars.path,
+          rendererSettings: vars.rendererSettings || {preserveAspectRatio: "xMidYMid slice"},
+        });
 
-const tick = () => {
-  circle.x += (mouse.x - circle.x) * speed;
-  circle.y += (mouse.y - circle.y) * speed;
-  const translateTransform = `translate(${circle.x}px, ${circle.y}px)`;
+        for (let p in vars){
+            st[p] = vars[p];
+        }
 
-  const deltaMouseX = mouse.x - previousMouse.x;
-  const deltaMouseY = mouse.y - previousMouse.y;
-  previousMouse.x = mouse.x;
-  previousMouse.y = mouse.y;
-  const mouseVelocity = Math.min(Math.sqrt(deltaMouseX**2 + deltaMouseY**2) * 4, 150); 
-  const scaleValue = (mouseVelocity / 150) * 0.5;
-  currentScale += (scaleValue - currentScale) * speed;
-  const scaleTransform = `scale(${1 + currentScale}, ${1 - currentScale})`;
-
-  const angle = Math.atan2(deltaMouseY, deltaMouseX) * 180 / Math.PI;
-  if (mouseVelocity > 20) {
-    currentAngle = angle;
+        animation.addEventListener("DOMLoaded", function () {
+            let createTween = function () {
+              animation.frameTween = gsap.to(playhead, {
+                frame: animation.totalFrames - 1,
+                ease: "none",
+                onUpdate: () => animation.goToAndStop(playhead.frame, true),
+                scrollTrigger: st,
+              });
+              return () => animation.destroy && animation.destroy();
+            };
+            ctx && ctx.add ? ctx.add(createTween) : createTween();
+          });
+          
+          return animation;          
   }
-  const rotateTransform = `rotate(${currentAngle}deg)`;
-
-  circleElement.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
-
-  window.requestAnimationFrame(tick);
-}
-
-tick();
+  
