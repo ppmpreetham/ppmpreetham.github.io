@@ -8,8 +8,9 @@ body{
     width:100%;
     height:500vh;
     background: black;
-    color: white;
+    /* color: white; */
     font-family: Inter;
+    overflow-x: hidden;
 }
 
 h1{
@@ -22,7 +23,7 @@ h1{
 p{
     font-size: 24px;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 175%;
 }
 
 nav{
@@ -33,7 +34,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .links{
@@ -52,7 +53,7 @@ nav a{
     font-size: 28px;
 }
 
-.lottie-anim animation{
+.lottie-container .animation{
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -60,33 +61,33 @@ nav a{
     z-index: -1;
 }
 
-.lottie-anim animation:after{
+.animation:after{
     content: "";
     background-image:("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
     width: 200%;
-    height: 200%;
+    height: 200%;   
     position: fixed;
     top: O;
     left: O;
     opacity:0.1;
-    animation: animateGrain 10s steps(10) linear;
+    animation: animateGrain 8s steps(10) infinite;
 }
 
 .gradient{
     width: 100vw;
-    height: 200vh;
-    position: fixed;
+    height: 183vh;
+    position: relative;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 100%
+        rgba(9, 255, 0, 0) 0%,
+        rgb(0, 0, 0) 100%
     );
     z-index: 1;
 }
 
 .content{
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 300vh;
     padding: 2em;
     background: black;
@@ -96,8 +97,8 @@ nav a{
 
 .lottie-end{
     position: absolute;
-    width: 100vw;
     top: 100vh;
+    width: 100%;
     height:1px;
 }
 
