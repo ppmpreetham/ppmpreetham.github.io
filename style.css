@@ -3,13 +3,19 @@
     padding:0;
     box-sizing: border-box;
 }
-
+@font-face {
+    font-family: HELVETICANOW;
+    src: url("../public/fonts/HELVETICANOWDISPLAY-REGULAR.OTF");
+  }
+  
 body{
+    font-family: HELVETICANOW;
     width:100%;
     height:500vh;
     background: black;
-    /* color: white; */
-    font-family: Inter;
+    color: white;
+    /* font-family: Inter; */
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -30,7 +36,7 @@ nav{
     position:fixed;
     top:0;
     width:100vw;
-    padding:2em;
+    padding:2em 5em 2em 4em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,6 +53,7 @@ nav a{
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.875rem;
 }
 
 .logo a{
@@ -85,16 +92,39 @@ nav a{
     z-index: 1;
 }
 
+.title-container{
+    position: fixed;
+    width: 80%;
+    height: 125vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    z-index: 1;
+    padding:4em;
+}
+.fixed-text{
+    font-size: 4.375rem;
+    line-height: 0.9;
+    text-align: left;
+    color:white;
+}
 .content{
     position: relative;
     width: 100%;
     height: 300vh;
-    padding: 2em;
+    padding: 1em 3.85em;
     background: black;
     color: white;
     z-index: 1;
 }
 
+.content-para{
+    margin: 1px solid white;
+    z-index:3;
+    font-size:2.5rem;
+    line-height: 125%;
+}
 .lottie-end{
     position: absolute;
     top: 100vh;

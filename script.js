@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             end: `bottom center+=${document.querySelector(".animation").offsetHeight}`,
             renderer: "svg",
             target: ".animation",
-            path: './public/media/geo_nodes_lottie.json',
+            path: './public/media/mographlottielong.json',
             scrub: 2,
         });
     }
