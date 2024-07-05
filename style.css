@@ -63,13 +63,13 @@ nav a{
 
 .animation:after{
     content: "";
-    background-image:("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
     width: 200%;
     height: 200%;   
     position: fixed;
-    top: O;
-    left: O;
-    opacity:0.1;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
     animation: animateGrain 8s steps(10) infinite;
 }
 
