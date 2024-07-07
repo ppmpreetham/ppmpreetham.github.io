@@ -63,6 +63,7 @@ nav a{
     text-decoration: none;
     font-weight: 500;
     font-size: 0.875rem;
+    z-index: 1000;
 }
 
 .logo a{
@@ -99,7 +100,7 @@ nav a{
         rgba(9, 255, 0, 0) 0%,
         rgb(0, 0, 0) 100%
     );
-    z-index: 1000;
+    z-index: 1;
 }
 
 .title-container{
@@ -113,6 +114,7 @@ nav a{
     z-index: 1;
     padding:4em;
 }
+
 .fixed-text{
     font-size: 4.375rem;
     line-height: 0.9;
@@ -159,7 +161,9 @@ nav a{
 
 }
 .element-on-focus{
-    /* font-size: 2rem; */
+    span{
+        font-size: 3.5rem;
+    }
     color: ivory;
     z-index:3;
     span{
