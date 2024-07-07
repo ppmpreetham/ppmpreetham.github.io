@@ -7,14 +7,22 @@
     font-family: HELVETICANOW;
     src: url("../public/fonts/HELVETICANOWDISPLAY-REGULAR.OTF");
   }
-  
+@font-face {
+    font-family: ROSLINDALE;
+    src: url("../public/fonts/ROSLINDALEVARIABLE-VFDISPLAY.TTF");
+  }
+
+@font-face {
+  font-family: Frakthion;
+  src: url("../public/Fonts/PPFraktionMono-Regular.otf");
+}
+
 body{
     font-family: HELVETICANOW;
     width:100%;
-    height:500vh;
+    /* height:500vh; */
     background: black;
     color: white;
-    /* font-family: Inter; */
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -41,6 +49,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    mix-blend-mode: difference;
 }
 
 .links{
@@ -78,6 +87,7 @@ nav a{
     left: 0;
     opacity: 0.1;
     animation: animateGrain 8s steps(10) infinite;
+    z-index:1;
 }
 
 .gradient{
@@ -89,7 +99,7 @@ nav a{
         rgba(9, 255, 0, 0) 0%,
         rgb(0, 0, 0) 100%
     );
-    z-index: 1;
+    z-index: 1000;
 }
 
 .title-container{
@@ -108,22 +118,6 @@ nav a{
     line-height: 0.9;
     text-align: left;
     color:white;
-}
-.content{
-    position: relative;
-    width: 100%;
-    height: 300vh;
-    padding: 1em 3.85em;
-    background: black;
-    color: white;
-    z-index: 1;
-}
-
-.content-para{
-    margin: 1px solid white;
-    z-index:3;
-    font-size:2.5rem;
-    line-height: 125%;
 }
 .lottie-end{
     position: absolute;
@@ -145,4 +139,31 @@ nav a{
     80% {transform: translate(-15%, -20%);}
     90% {transform: translate(-5%, -10%);}
     100% {transform: translate(-15%, -20%);}
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    height: 300vh;
+    padding: 1em 3.85em;
+    background: black;
+    color: white;
+    z-index: 1;
+}
+
+
+.para{
+    font-size: 3rem;
+    line-height: 125%;
+    margin: 1em 0;
+
+}
+.element-on-focus{
+    /* font-size: 2rem; */
+    color: ivory;
+    z-index:3;
+    span{
+        font-weight: 700;
+        color: cyan; 
+    }
 }
