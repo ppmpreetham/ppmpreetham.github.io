@@ -59,7 +59,6 @@ function LottieScrollTrigger(vars) {
   return animation;
 }
 
-
 const paras = gsap.utils.toArray(".content-para p");
 paras.forEach((para) => {
   gsap.to(para, {
@@ -74,4 +73,32 @@ paras.forEach((para) => {
       scrub: 1,
     },
   });
+});
+
+// Horizantal Scroll
+const races = document.querySelector(".workScroll");
+let racesWidth = races.offsetWidth;
+let amountToScroll = racesWidth - window.innerWidth;
+
+
+function getScrollAmount(){
+  let racesWidth=races.scrollWidth;
+  return -(racesWidth-window.innerWidth);
+}
+
+const tween = gsap.to(races,{
+  x: getScrollAmount,
+  duration: 3,
+  ease: "none",
+});
+
+ScrollTrigger.create({
+  trigger:".horizantalScroll",
+  start: "top 20%",
+  end: () => `+=${-1*getScrollAmount()}`,
+  pin: true,
+  animation : tween,
+  scrub: 1,
+  invalidateOnRefresh: true,
+  markers:true,
 });
