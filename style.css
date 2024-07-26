@@ -17,6 +17,10 @@
   src: url("../public/Fonts/PPFraktionMono-Regular.otf");
 }
 
+.logo{
+    max-width: 15vh;
+}
+
 body{
     font-family: HELVETICANOW;
     width:100%;
@@ -174,4 +178,18 @@ nav a{
 
 .scroll{
     font-size: 2rem;
+}
+
+.workScroll{
+	width:fit-content;
+	display:flex;
+	flex-wrap:nowrap;
+}
+
+.workScroll h2{
+	font-size:30vw;
+	flex-shrink:0;
+	padding-right:0.3em;
+	padding-left:0.3em;	
+	margin:0;	
 }
