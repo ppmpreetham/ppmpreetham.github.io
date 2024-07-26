@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Preetham</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="public\media\logo-transparent.png" type="image/x-icon">
+</head>
+
+<style>
+    html,body{
+        width: 100%;
+        height: 4000vh;
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cursor{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 400px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .gallery{
+        position: fixed;
+        width: 200%;
+        height: 100%;
+        left: -75%;
+        overflow: hidden;
+    }
+
+    .item{
+        position: absolute;
+        top:0;
+        left:0;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 80px;
+        cursor: pointer;
+    }
+
+    .item p{
+        width: 100%;
+        font-size: 42px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color:white;
+    }
+
+    .item p span{
+        padding: 0 20px;
+        font-size: 16px;
+    }
+</style>
+
+<body>  
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="public\media\logo-transparent.png" alt="Preetham Pemmasani logo" class="logo"></a>
+        </div>
+        <div class="links">
+            <a href="#">Blog</a>
+            <a href="#">Work</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="gallery"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="work-script.js"></script>
+</body>
+</html>
