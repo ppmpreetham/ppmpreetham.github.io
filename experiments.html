@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENTS | Preetham</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #0f0f0f;
+        }
+
+        .info-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            padding: 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .experiment-name {
+            /* padding: 1em 1em 0 1em; */
+            color: white;
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        .home a{
+            float: right;
+            text-underline-offset: 0.5em;
+            color: white;
+        }
+        
+        .home a :visited {
+            color: white;
+        }
+        
+        .home a ::after {
+            color: white;
+        }
+
+        .experiment-tagline {
+            /* padding: 0 1em; */
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .experiment-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 3em;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            width: 100vw;
+            margin: 0 auto 2em auto;
+            padding: 1em 0.5em;
+            display: flex;
+            justify-content: center;
+        }
+
+        .indicator {
+            color:white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 100%;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .gallery-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 1 20px;
+            height: 400px;
+            margin: 0 5px;
+            background: #0f0f0f;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 1000px;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <div class="experiment-name"></div>
+        <div class="experiment-tagline"></div>
+        <div class="home"><a href="index.html">go back</a></div>
+    </div>
+    <div class="container">
+        <div class="indicator"></div>
+        <div class="gallery"></div>
+    </div>
+    <div class="experiment-description"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const galleryContainer = document.querySelector(".gallery");
+        const experimentName = document.querySelector(".experiment-name");
+        const experimentTagline = document.querySelector(".experiment-tagline");
+        const experimentDescription = document.querySelector(".experiment-description");
+        const indicator = document.querySelector(".indicator");
+        const defaultItemFlex = "0 1 20px";
+        const hoverItemFlex = "1 1 800px";
+        
+        let galleryItems;
+        
+        fetch('experiment-data.json')
+            .then(response => response.json())
+            .then(galleryData => {
+                galleryData.forEach((item, index) => {
+                    const galleryItem = document.createElement("div");
+                    galleryItem.className = "gallery-item";
+                    galleryItem.innerHTML = `<img src="${item.src}" alt="${item.name}">`;
+                    galleryContainer.appendChild(galleryItem);
+                });
+        
+                galleryItems = galleryContainer.querySelectorAll(".gallery-item");
+        
+                galleryItems[0].isHovered = true;
+                updateGalleryItems();
+                updateInfo(0, galleryData);
+        
+                galleryItems.forEach((item, index) => {
+                    item.addEventListener("mouseenter", () => {
+                        galleryItems.forEach((otherItem) => {
+                            otherItem.isHovered = otherItem === item;
+                        });
+                        updateGalleryItems();
+                        updateInfo(index, galleryData);
+                    });
+                });
+            })
+            .catch(error => console.error('Error loading experiment data sadge :(', error));
+        
+        const updateGalleryItems = () => {
+            galleryItems.forEach((item) => {
+                let flex = defaultItemFlex;
+                if (item.isHovered) {
+                    flex = hoverItemFlex;
+                }
+                gsap.to(item, { flex: flex, duration: 1 });
+            });
+        }
+        
+        const updateInfo = (index, data) => {
+            experimentName.textContent = data[index].name;
+            experimentTagline.textContent = data[index].tagline;
+            experimentDescription.textContent = data[index].description;
+        }
+        
+        galleryContainer.addEventListener("mousemove", (e) => {
+            gsap.to(indicator, { left: `${e.clientX - galleryContainer.getBoundingClientRect().left}px`, duration: 1, ease: "power2.out" });
+        });
+        </script>
+</body>
+</html>

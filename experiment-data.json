@@ -1,0 +1,44 @@
+[
+    {
+        "src": "testie/DSC_1112.JPG",
+        "name": "Experiment 1",
+        "tagline": "Tagline 1",
+        "description": "Description 1",
+        "url": "https://example.com/experiment1"
+    },
+    {
+        "src": "testie/DSC_1113.JPG",
+        "name": "Experiment 2",
+        "tagline": "Tagline 2",
+        "description": "Description 2",
+        "url": "https://example.com/experiment2"
+    },
+    {
+        "src": "testie/DSC_1114.JPG",
+        "name": "Experiment 3",
+        "tagline": "Tagline 3",
+        "description": "Description 3",
+        "url": "https://example.com/experiment3"
+    },
+    {
+        "src": "testie/DSC_1115.JPG",
+        "name": "Experiment 4",
+        "tagline": "Tagline 4",
+        "description": "Description 4",
+        "url": "https://example.com/experiment4"
+    },
+    {
+        "src": "testie/DSC_1116.JPG",
+        "name": "Experiment 5",
+        "tagline": "Tagline 5",
+        "description": "Description 5",
+        "url": "https://example.com/experiment5"
+    },
+    {
+        "src": "testie/DSC_1118.JPG",
+        "name": "Experiment 6",
+        "tagline": "Tagline 6",
+        "description": "Description 6",
+        "url": "https://example.com/experiment6"
+    }
+]

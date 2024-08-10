@@ -84,11 +84,11 @@ works.forEach((work) => {
     opacity: 1,
     scrollTrigger: {
       trigger: work,
-      start: "top 50%",
+      start: "top 55%",
       end: "top 30%",
       scrub: true,
       toggleActions: "play none none reverse",
-      // toggleClass: "element-on-focus",
+      toggleClass: "element-on-focus",
       scrub: 1,
       // markers: true,
     },
