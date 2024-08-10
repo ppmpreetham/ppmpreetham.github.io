@@ -59,6 +59,7 @@ function LottieScrollTrigger(vars) {
   return animation;
 }
 
+// Subtle movement
 const paras = gsap.utils.toArray(".content-para p");
 paras.forEach((para) => {
   gsap.to(para, {
@@ -71,6 +72,25 @@ paras.forEach((para) => {
       toggleActions: "play none none reverse",
       toggleClass: "element-on-focus",
       scrub: 1,
+    },
+  });
+});
+
+
+// Opacity
+const works = gsap.utils.toArray(".work-feature div");
+works.forEach((work) => {
+  gsap.to(work, {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: work,
+      start: "top 50%",
+      end: "top 30%",
+      scrub: true,
+      toggleActions: "play none none reverse",
+      // toggleClass: "element-on-focus",
+      scrub: 1,
+      // markers: true,
     },
   });
 });
