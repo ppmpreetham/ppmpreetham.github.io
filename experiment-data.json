@@ -3,42 +3,42 @@
         "src": "experiment-files/ML_GEO_NODES.png",
         "name": "Machine Learning in Blender",
         "tagline": "First of it's kind",
-        "description": "Supervised Machine Learning, not implemented in python, but in Blender, leveraging the usage of Geometry Nodes in Blender.",
+        "description": "Supervised Machine Learning, not implemented in python, but in Blender, leveraging the usage of Geometry Nodes.",
         "url": "https://www.google.com"
     },
     {
-        "src": "experiment-files/DSC_1113.JPG",
-        "name": "Experiment 2",
-        "tagline": "Tagline 2",
-        "description": "Description 2",
+        "src": "experiment-files/BOIDS_GEO_NODES.png",
+        "name": "Boids Simulation in Blender",
+        "tagline": "Emulating the birds",
+        "description": "Based off Craig Reynold's paper, but in Blender",
         "url": "https://example.com/experiment2"
     },
     {
-        "src": "experiment-files/DSC_1114.JPG",
-        "name": "Experiment 3",
-        "tagline": "Tagline 3",
-        "description": "Description 3",
+        "src": "experiment-files/GRASS_PROXIMITY.png",
+        "name": "Grass with proximity",
+        "tagline": "realistic wind too!",
+        "description": "This is what peril noise, with vector math gives you!!",
         "url": "https://example.com/experiment3"
     },
     {
-        "src": "experiment-files/DSC_1115.JPG",
-        "name": "Experiment 4",
-        "tagline": "Tagline 4",
-        "description": "Description 4",
+        "src": "experiment-files/MANDELBROT_SET.png",
+        "name": "Mandelbrot Set",
+        "tagline": "Zₙ₊₁ = Zₙ2 + c",
+        "description": "Simple OSL Script written to emulate Mandelbrot Set in Blender",
         "url": "https://example.com/experiment4"
     },
     {
-        "src": "experiment-files/DSC_1116.JPG",
-        "name": "Experiment 5",
-        "tagline": "Tagline 5",
-        "description": "Description 5",
+        "src": "experiment-files/ATOM_PROCEDURAL.png",
+        "name": "Procedural Atom",
+        "tagline": "based off Scrodinger's equations",
+        "description": "Featured in minutephysics",
         "url": "https://example.com/experiment5"
     },
     {
-        "src": "experiment-files/DSC_1118.JPG",
-        "name": "Experiment 6",
-        "tagline": "Tagline 6",
-        "description": "Description 6",
+        "src": "experiment-files/WINE_BOTTLE_GEN.png",
+        "name": "Wine Bottle Generator",
+        "tagline": "Procedural Wine using Geometry nodes",
+        "description": "Unlimited alcohol for life!!",
         "url": "https://example.com/experiment6"
     }
 ]
