@@ -127,7 +127,7 @@
             left: 0;
             width: 10px;
             height: 10px;
-            background: white;
+            /* background: white; */
             border-radius: 100%;
         }
 
@@ -169,7 +169,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="indicator"></div>
+        <div class="indicator">↓</div>
         <div class="gallery"></div>
     </div>
     <div class="experiment-description"></div>
@@ -263,6 +263,7 @@
             experimentName.textContent = data[index].name;
             experimentTagline.textContent = data[index].tagline;
             experimentDescription.textContent = data[index].description;
+            indicator.textContent = index+1;
         }
         </script>
 </body>
