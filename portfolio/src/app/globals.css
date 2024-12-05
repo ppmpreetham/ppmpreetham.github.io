@@ -3,6 +3,8 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-murmure: murmure, "sans-serif";
+  --font-alterBridge: var(--font-alterBridge);
 }
 
 :root {
@@ -21,4 +23,14 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: murmure;
+  src: url("/fonts/LeMurmure-Regular.woff2");
+}
+
+@font-face {
+  font-family: "alterBridge";
+  src: url("/fonts/ALTER BRIDGE.TTF") format("ttf");
 }
