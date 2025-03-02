@@ -4,7 +4,7 @@
         "name": "Machine Learning in Blender",
         "tagline": "First of it's kind",
         "description": "Supervised Machine Learning, not implemented in python, but in Blender, leveraging the usage of Geometry Nodes.",
-        "url": "https://www.google.com"
+        "url": "./experiment-pages/machinelearning.html"
     },
     {
         "src": "experiment-files/BOIDS_GEO_NODES.png",
