@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Hamburger from "../../public/icons/hamburger";
+import Hamburger from "/public/icons/hamburger";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
