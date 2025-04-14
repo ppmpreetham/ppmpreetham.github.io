@@ -1,6 +1,6 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import gsap from "gsap";
 import { useRouter } from "next/navigation"; // For Next.js routing
@@ -10,14 +10,14 @@ const PI = Math.PI;
 // Define page mappings for each object
 const objectPageMappings = {
   Cube: "/desk",
-  Cube002_1: "/computer",
-  Cube002_2: "/screen",
-  Cube001: "/smartphone",
-  Plane001_1: "/book1",
-  Plane001_2: "/book1-pages",
-  Plane002_1: "/book2",
-  Plane002_2: "/book2-pages",
+  Cube002: "/computer",
+  Cube004: "/screen",
+  Camera: "/camera",
+  Plane001: "/book1",
+  Plane002: "/book2",
   Cube003: "/projects",
+  Brain: "/brain",
+  Sphere: "/sphere",
 };
 
 export function Model(props) {
@@ -50,8 +50,6 @@ export function Model(props) {
   };
 
   const handlePointerOut = (e) => {
-    // if (animatingMesh) return; // Don't restore material during animation
-
     e.stopPropagation();
     const meshId = e.object.uuid;
     // Restore original material
@@ -129,9 +127,6 @@ export function Model(props) {
     timeline.to(
       mesh.position,
       {
-        // x: targetPosition.x - groupRef.current.position.x,
-        // y: targetPosition.y - groupRef.current.position.y,
-        // z: targetPosition.z - groupRef.current.position.z,
         x: targetPosition.x,
         y: targetPosition.y,
         z: targetPosition.z,
@@ -140,19 +135,6 @@ export function Model(props) {
       },
       0.3
     );
-
-    // Scale up the object
-    // timeline.to(
-    //   mesh.scale,
-    //   {
-    //     x: mesh.scale.x * 2,
-    //     y: mesh.scale.y * 2,
-    //     z: mesh.scale.z * 2,
-    //     duration: 1,
-    //     ease: "power2.inOut",
-    //   },
-    //   0.3
-    // );
   };
 
   // Add object references
@@ -162,74 +144,63 @@ export function Model(props) {
     }
   };
 
+  // Interactive props to add to mesh components
+  const getInteractiveProps = (objectName) => ({
+    ref: (mesh) => addMeshRef(mesh, objectName),
+    onPointerOver: handlePointerOver,
+    onPointerOut: handlePointerOut,
+    onClick: (e) => handleClick(e, objectName),
+  });
+
   return (
     <group ref={groupRef} {...props} dispose={null} rotation={[0, -PI / 2, 0]}>
       <mesh
-        ref={(mesh) => addMeshRef(mesh, "Cube")}
         castShadow
         receiveShadow
         geometry={nodes.Cube.geometry}
-        material={nodes.Cube.material}
+        material={materials["Material.001"]}
         scale={[1, 0.103, 1]}
-        onPointerOver={handlePointerOver}
-        onPointerOut={handlePointerOut}
-        onClick={(e) => handleClick(e, "Cube")}
+        {...getInteractiveProps("Cube")}
       />
-      <group position={[-0.583, 0.266, 0]} scale={2.097}>
-        <mesh
-          ref={(mesh) => addMeshRef(mesh, "Cube002_1")}
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube002_1.geometry}
-          material={materials["Desktop Material"]}
-          onPointerOver={handlePointerOver}
-          onPointerOut={handlePointerOut}
-          onClick={(e) => handleClick(e, "Cube002_1")}
-        />
-        <mesh
-          ref={(mesh) => addMeshRef(mesh, "Cube002_2")}
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube002_2.geometry}
-          material={materials.Glass}
-          onPointerOver={handlePointerOver}
-          onPointerOut={handlePointerOut}
-          onClick={(e) => handleClick(e, "Cube002_2")}
-        />
-      </group>
       <mesh
-        ref={(mesh) => addMeshRef(mesh, "Cube001")}
         castShadow
         receiveShadow
-        geometry={nodes.Cube001.geometry}
-        material={nodes.Cube001.material}
-        position={[-0.039, 0.241, 0.933]}
-        rotation={[0, -0.316, 0]}
-        scale={[0.071, 0.155, 0.155]}
-        onPointerOver={handlePointerOver}
-        onPointerOut={handlePointerOut}
-        onClick={(e) => handleClick(e, "Cube001")}
+        geometry={nodes.Cube002.geometry}
+        material={materials["Desktop Material"]}
+        position={[-0.583, 0.266, 0]}
+        scale={2.097}
+        {...getInteractiveProps("Cube002")}
       />
+      <group position={[0.447, 0.327, -0.68]} scale={0.487}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane_1.geometry}
+          material={materials.Flipper}
+          {...getInteractiveProps("Plane_1")}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane_2.geometry}
+          material={materials["Flipper Glow"]}
+          {...getInteractiveProps("Plane_2")}
+        />
+      </group>
       <group position={[0.415, 0.24, -1.264]} scale={1.528}>
         <mesh
-          ref={(mesh) => addMeshRef(mesh, "Plane001_1")}
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane001.geometry}
+          material={materials["Book Cover"]}
+          {...getInteractiveProps("Plane001")}
+        />
+        <mesh
           castShadow
           receiveShadow
           geometry={nodes.Plane001_1.geometry}
-          material={materials["Book Cover"]}
-          onPointerOver={handlePointerOver}
-          onPointerOut={handlePointerOut}
-          onClick={(e) => handleClick(e, "Plane001_1")}
-        />
-        <mesh
-          ref={(mesh) => addMeshRef(mesh, "Plane001_2")}
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane001_2.geometry}
           material={materials["Book Pages"]}
-          onPointerOver={handlePointerOver}
-          onPointerOut={handlePointerOut}
-          onClick={(e) => handleClick(e, "Plane001_2")}
+          {...getInteractiveProps("Plane001_1")}
         />
       </group>
       <group
@@ -238,28 +209,21 @@ export function Model(props) {
         scale={1.528}
       >
         <mesh
-          ref={(mesh) => addMeshRef(mesh, "Plane002_1")}
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane002.geometry}
+          material={materials["Book Cover 2"]}
+          {...getInteractiveProps("Plane002")}
+        />
+        <mesh
           castShadow
           receiveShadow
           geometry={nodes.Plane002_1.geometry}
-          material={materials["Book Cover 2"]}
-          onPointerOver={handlePointerOver}
-          onPointerOut={handlePointerOut}
-          onClick={(e) => handleClick(e, "Plane002_1")}
-        />
-        <mesh
-          ref={(mesh) => addMeshRef(mesh, "Plane002_2")}
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane002_2.geometry}
           material={materials["Book Pages"]}
-          onPointerOver={handlePointerOver}
-          onPointerOut={handlePointerOut}
-          onClick={(e) => handleClick(e, "Plane002_2")}
+          {...getInteractiveProps("Plane002_1")}
         />
       </group>
       <mesh
-        ref={(mesh) => addMeshRef(mesh, "Cube003")}
         castShadow
         receiveShadow
         geometry={nodes.Cube003.geometry}
@@ -267,10 +231,85 @@ export function Model(props) {
         position={[0.114, 0.473, -0.784]}
         rotation={[Math.PI, 0.498, -Math.PI / 2]}
         scale={0.466}
-        onPointerOver={handlePointerOver}
-        onPointerOut={handlePointerOut}
-        onClick={(e) => handleClick(e, "Cube003")}
+        {...getInteractiveProps("Cube003")}
       />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube004.geometry}
+        material={materials["Desktop Glass"]}
+        position={[-0.561, 0.266, -1.547]}
+        scale={2.097}
+        {...getInteractiveProps("Cube004")}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Camera.geometry}
+        material={materials.camera}
+        position={[0.346, 0.353, 1.057]}
+        scale={0.086}
+        {...getInteractiveProps("Camera")}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere.geometry}
+        material={materials["Glass.001"]}
+        position={[0.873, 0.291, 0.155]}
+        scale={0.028}
+        {...getInteractiveProps("Sphere")}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Brain.geometry}
+        material={materials.material_0}
+        position={[0, 0.31, 1.243]}
+        scale={0.003}
+        {...getInteractiveProps("Brain")}
+      />
+      <group
+        position={[0.337, 0.273, 0.384]}
+        rotation={[-Math.PI / 2, 0, 2.168]}
+        scale={0.016}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["������_Material_0"].geometry}
+          material={materials["Material.003"]}
+          {...getInteractiveProps("Material_0")}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["������_Material_0_1"].geometry}
+          material={materials[".001"]}
+          {...getInteractiveProps("Material_0_1")}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["������_Material_0_2"].geometry}
+          material={materials.material}
+          {...getInteractiveProps("Material_0_2")}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["������_Material_0_3"].geometry}
+          material={materials[".002"]}
+          {...getInteractiveProps("Material_0_3")}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["������_Material_0_4"].geometry}
+          material={materials[".003"]}
+          {...getInteractiveProps("Material_0_4")}
+        />
+      </group>
     </group>
   );
 }
