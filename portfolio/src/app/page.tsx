@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import WorkPage from "../components/WorkPage";
+import Full3DView from "@/components/Full3DView";
 
 export default function Home() {
   return (
     <div>
+      <Full3DView />
       <WorkPage
         images={[
           {
@@ -12,7 +14,7 @@ export default function Home() {
             scale: 4,
           },
           {
-            src: "https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg",
+            src: "../../public/images/bigbuildings.jpg",
             scale: 5,
             position: {
               top: "65vh",
