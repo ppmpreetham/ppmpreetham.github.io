@@ -10,18 +10,40 @@ export default function Home() {
       <WorkPage
         images={[
           {
-            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.png",
+            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/batmobile.mp4",
             scale: 4,
+            type: "vid",
+          },
+          {
+            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/logo.jpg",
+            scale: 4,
+            position: {
+              top: "65vh",
+              left: "30vw",
+              width: "30vw",
+              height: "25vh",
+            },
             type: "img",
+          },
+          {
+            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/cooking.mp4",
+            scale: 5,
+            position: {
+              top: "58vh",
+              left: "9vw",
+              width: "20vw",
+              height: "25vh",
+            },
+            type: "vid",
           },
           {
             src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.png",
             scale: 5,
             position: {
-              top: "65vh",
-              left: "60vw",
-              width: "35vw",
-              height: "30vh",
+              top: "50vh",
+              left: "65vw",
+              width: "20vw",
+              height: "45vh",
             },
             type: "img",
           },
@@ -29,7 +51,7 @@ export default function Home() {
             src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/bigbuildings.jpg",
             scale: 6,
             position: {
-              top: "10vh",
+              top: "2vh",
               left: "65vw",
               width: "20vw",
               height: "45vh",
@@ -40,45 +62,23 @@ export default function Home() {
             src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/astronaut.mp4",
             scale: 7,
             position: {
-              top: "0vh",
-              left: "15.5vw",
+              top: "2vh",
+              left: "16vw",
               width: "20vw",
-              height: "70vh",
+              height: "55vh",
             },
             type: "vid",
           },
           {
-            src: "https://static.vecteezy.com/system/resources/thumbnails/008/612/703/small/html-code-on-computer-monitor-software-web-developer-programming-code-photo.jpg",
-            scale: 5,
+            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/edit_party.mp4",
+            scale: 10,
             position: {
-              top: "27.5vh",
-              left: "5vw",
-              width: "20vw",
-              height: "25vh",
+              top: "13vh",
+              left: "40vw",
+              width: "22vw",
+              height: "22vh",
             },
-            type: "img",
-          },
-          {
-            src: "https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg",
-            scale: 4,
-            position: {
-              top: "67.5vh",
-              left: "22.5vw",
-              width: "30vw",
-              height: "25vh",
-            },
-            type: "img",
-          },
-          {
-            src: "https://static.vecteezy.com/system/resources/thumbnails/008/612/703/small/html-code-on-computer-monitor-software-web-developer-programming-code-photo.jpg",
-            scale: 3,
-            position: {
-              top: "22.5vh",
-              left: "25vw",
-              width: "15vw",
-              height: "15vh",
-            },
-            type: "img",
+            type: "vid",
           },
         ]}
       />

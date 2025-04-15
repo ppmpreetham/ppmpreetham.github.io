@@ -86,7 +86,11 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
               ) : (
                 <video
                   className="object-cover w-full h-full"
-                  autoPlay={true}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                  }}
+                  autoPlay
                   loop
                   muted
                 >
