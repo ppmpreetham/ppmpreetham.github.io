@@ -84,7 +84,12 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
                   className="object-cover w-full h-full"
                 />
               ) : (
-                <video className="object-cover w-full h-full">
+                <video
+                  className="object-cover w-full h-full"
+                  autoPlay={true}
+                  loop
+                  muted
+                >
                   <source src={image.src} type="video/mp4" />
                 </video>
               )}
