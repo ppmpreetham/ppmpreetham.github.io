@@ -14,7 +14,7 @@ export default function Home() {
             scale: 4,
           },
           {
-            src: "../../public/images/bigbuildings.jpg",
+            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.png",
             scale: 5,
             position: {
               top: "65vh",
@@ -24,11 +24,11 @@ export default function Home() {
             },
           },
           {
-            src: "https://static.vecteezy.com/system/resources/thumbnails/008/612/703/small/html-code-on-computer-monitor-software-web-developer-programming-code-photo.jpg",
+            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/bigbuildings.jpg",
             scale: 6,
             position: {
-              top: "-10vh",
-              left: "-25vw",
+              top: "10vh",
+              left: "65vw",
               width: "20vw",
               height: "45vh",
             },

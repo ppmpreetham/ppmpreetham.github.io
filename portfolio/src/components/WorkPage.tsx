@@ -12,6 +12,8 @@ interface ImageProps {
     width?: string;
     height?: string;
   };
+  alt?: string;
+  type?: "img" | "vid";
 }
 
 interface WorkPageProps {
@@ -56,8 +58,8 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
   }, [images]);
 
   return (
-    <div ref={containerRef} className="h-[300vh] relative my-[100vh]">
-      <div className="sticky top-0 h-[100vh] bg-orange-400 overflow-hidden">
+    <div ref={containerRef} className="h-[300vh] relative">
+      <div className="sticky top-0 h-[100vh] bg-black overflow-hidden">
         {images.map((image, index) => (
           <div
             ref={(el) => {
@@ -75,11 +77,17 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
                 left: image.position?.left || "auto",
               }}
             >
-              <img
-                src={image.src}
-                alt=""
-                className="object-cover w-full h-full"
-              />
+              {image.type === "img" ? (
+                <img
+                  src={image.src}
+                  alt=""
+                  className="object-cover w-full h-full"
+                />
+              ) : (
+                <video className="object-cover w-full h-full">
+                  <source src={image.src} type="video/mp4" />
+                </video>
+              )}
             </div>
           </div>
         ))}

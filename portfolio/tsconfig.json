@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/3DModel.jsx"
+    "src/components/3DModel.jsx",
+    "src/components/WorkPage.tsx"
   ],
   "exclude": ["node_modules"]
 }
