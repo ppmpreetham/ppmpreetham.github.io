@@ -1,17 +1,18 @@
 import React from "react";
 import WorkPage from "@/components/WorkPage";
+import CharacterProximityWeight from "@/components/CharacterProximityWeight";
 
 const Renders = () => {
   return (
     <div className="w-screen">
-      <div className="text-6xl w-full p-4 font-murmure">Renders</div>
+      <div className="text-6xl w-full p-4 font-murmure">RENDERS</div>
       <div>
         <p className="text-2xl w-full p-4 font-helvetica">
           I am a 3D artist and I love to create 3D models and animations. I have
           been working with Blender for over 6 years.
         </p>
       </div>
-      {/* <div className="h-[25vh]"></div> */}
+      <CharacterProximityWeight text="RENDERS" minWeight={300} />
       <WorkPage
         images={[
           {
@@ -107,8 +108,10 @@ const Renders = () => {
           },
         ]}
       />
+
       <div className="h-screen">
         <h2 className="text-7xl">MY WORK</h2>
+        <h6>Not your regular sh*t</h6>
       </div>
     </div>
   );

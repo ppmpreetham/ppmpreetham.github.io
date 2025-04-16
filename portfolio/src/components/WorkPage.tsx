@@ -42,7 +42,6 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
         end: "bottom bottom",
         scrub: 0.5,
         pin: false,
-        markers: false,
       },
     });
 

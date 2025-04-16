@@ -7,6 +7,7 @@
   --font-alterBridge: var(--font-alterBridge);
   --font-sddystopian: var(--font-sddystopian);
   --font-helvetica: var(--font-helvetica);
+  --font-heptaSlab: heptaSlab, "sans-serif";
 }
 
 :root {
@@ -45,4 +46,11 @@ body {
 @font-face {
   font-family: "helvetica";
   src: url("/fonts/HELVETICANOW.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "HeptaSlab";
+  src: url("/fonts/HeptaSlab-VF.woff2") format("woff2 supports variations"),
+    url("/fonts/HeptaSlab-VF.woff2") format("woff2-variations");
+  font-weight: 100 1000;
 }
