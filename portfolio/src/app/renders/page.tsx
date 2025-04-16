@@ -22,7 +22,7 @@ const Renders = () => {
             encoding: "mp4",
           },
           {
-            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/logo.jpg",
+            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/flow_up.webm",
             scale: 4,
             position: {
               top: "65vh",
@@ -30,10 +30,11 @@ const Renders = () => {
               width: "30vw",
               height: "25vh",
             },
-            type: "img",
+            type: "vid",
+            encoding: "webm",
           },
           {
-            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/cooking.mp4",
+            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/cooking.webm",
             scale: 5,
             position: {
               top: "58vh",
@@ -42,21 +43,22 @@ const Renders = () => {
               height: "25vh",
             },
             type: "vid",
-            encoding: "mp4",
+            encoding: "webm",
           },
           {
-            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.jpg",
+            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/bigship.webm",
             scale: 5,
             position: {
               top: "50vh",
               left: "65vw",
-              width: "20vw",
+              width: "15vw",
               height: "45vh",
             },
-            type: "img",
+            type: "vid",
+            encoding: "webm",
           },
           {
-            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/bigbuildings.jpg",
+            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/spaceattack.webm",
             scale: 6,
             position: {
               top: "2vh",
@@ -64,10 +66,11 @@ const Renders = () => {
               width: "20vw",
               height: "45vh",
             },
-            type: "img",
+            type: "vid",
+            encoding: "webm",
           },
           {
-            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/astronaut.mp4",
+            src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/astronaut.webm",
             scale: 7,
             position: {
               top: "2vh",
@@ -76,7 +79,7 @@ const Renders = () => {
               height: "55vh",
             },
             type: "vid",
-            encoding: "mp4",
+            encoding: "webm",
           },
           {
             src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/edit_party.mp4",
