@@ -63,7 +63,7 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
 
   return (
     <div ref={containerRef} className="h-[300vh] relative">
-      <div className="sticky top-0 h-[100vh] bg-black overflow-hidden">
+      <div className="sticky top-0 h-[100vh] overflow-hidden">
         {images.map((image, index) => (
           <div
             ref={(el) => {
