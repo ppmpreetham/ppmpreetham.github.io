@@ -1,10 +1,17 @@
 import React from "react";
 import WorkPage from "@/components/WorkPage";
 
-const Projects = () => {
+const Renders = () => {
   return (
-    <div>
-      <div className="h-screen"></div>
+    <div className="w-screen">
+      <div className="text-6xl w-full p-4 font-murmure">Renders</div>
+      <div>
+        <p className="text-2xl w-full p-4 font-helvetica">
+          I am a 3D artist and I love to create 3D models and animations. I have
+          been working with Blender for over 6 years.
+        </p>
+      </div>
+      <div className="h-[25vh]"></div>
       <WorkPage
         images={[
           {
@@ -87,4 +94,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Renders;

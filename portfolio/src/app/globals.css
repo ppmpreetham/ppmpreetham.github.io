@@ -5,6 +5,8 @@
   --font-mono: var(--font-geist-mono);
   --font-murmure: murmure, "sans-serif";
   --font-alterBridge: var(--font-alterBridge);
+  --font-sddystopian: var(--font-sddystopian);
+  --font-helvetica: var(--font-helvetica);
 }
 
 :root {
@@ -33,4 +35,14 @@ body {
 @font-face {
   font-family: "alterBridge";
   src: url("/fonts/ALTER BRIDGE.TTF") format("ttf");
+}
+
+@font-face {
+  font-family: "sddystopian";
+  src: url("/fonts/Sddystopian.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url("/fonts/HELVETICANOW.OTF") format("opentype");
 }
