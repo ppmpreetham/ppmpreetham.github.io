@@ -19,6 +19,7 @@ const Renders = () => {
             scale: 4,
             type: "vid",
             muted: false,
+            encoding: "mp4",
           },
           {
             src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/logo.jpg",
@@ -41,6 +42,7 @@ const Renders = () => {
               height: "25vh",
             },
             type: "vid",
+            encoding: "mp4",
           },
           {
             src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.jpg",
@@ -74,6 +76,7 @@ const Renders = () => {
               height: "55vh",
             },
             type: "vid",
+            encoding: "mp4",
           },
           {
             src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/edit_party.mp4",
@@ -85,6 +88,7 @@ const Renders = () => {
               height: "22vh",
             },
             type: "vid",
+            encoding: "mp4",
           },
         ]}
       />
