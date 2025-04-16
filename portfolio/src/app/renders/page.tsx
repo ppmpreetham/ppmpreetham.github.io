@@ -18,6 +18,7 @@ const Renders = () => {
             src: "https://github.com/ppmpreetham/ppmpreetham.github.io/raw/refs/heads/main/portfolio/public/images/renders/batmobile.mp4",
             scale: 4,
             type: "vid",
+            muted: false,
           },
           {
             src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/logo.jpg",
@@ -42,7 +43,7 @@ const Renders = () => {
             type: "vid",
           },
           {
-            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.png",
+            src: "https://raw.githubusercontent.com/ppmpreetham/ppmpreetham.github.io/refs/heads/main/portfolio/public/images/renders/MEGAMEGACITY.jpg",
             scale: 5,
             position: {
               top: "50vh",

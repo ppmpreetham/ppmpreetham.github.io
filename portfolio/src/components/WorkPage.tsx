@@ -15,6 +15,8 @@ interface ImageProps {
   };
   alt?: string;
   type?: "img" | "vid";
+  muted?: boolean;
+  autoPlay?: boolean;
 }
 
 interface WorkPageProps {
@@ -91,9 +93,11 @@ const WorkPage: React.FC<WorkPageProps> = ({ images = [] }) => {
                     maxWidth: "100%",
                     maxHeight: "100%",
                   }}
-                  autoPlay
+                  autoPlay={
+                    image.autoPlay !== undefined ? image.autoPlay : true
+                  }
+                  muted={image.muted !== undefined ? image.muted : true}
                   loop
-                  muted
                 >
                   <source src={image.src} type="video/mp4" />
                 </video>
