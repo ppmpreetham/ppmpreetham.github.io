@@ -2,119 +2,285 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preetham Pemmasani</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="public\media\logo-transparent.png" type="image/x-icon">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #fff;
+            color: #0a0a0a;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+            padding: 64px 24px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 60px 48px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                padding: 80px 0;
+                max-width: 960px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Typography */
+        p {
+            margin-bottom: 20px;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-12 {
+            margin-bottom: 20px;
+        }
+
+        .mb-16 {
+            margin-bottom: 64px;
+        }
+
+        .mb-20 {
+            margin-bottom: 80px;
+        }
+
+        .font-medium {
+            font-weight: 600;
+        }
+
+        .text-sm {
+            font-size: 14px;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        /* Links */
+        a {
+            color: #0000ff;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #800080;
+        }
+
+        a:hover {
+            color: #0000ff;
+        }
+
+        a:active {
+            color: #ee0000;
+        }
+
+        /* Special tilted text */
+        .regrettably {
+            display: inline-block;
+            font-style: italic;
+            margin-left: 20px;
+            transform: rotate(-12deg);
+        }
+
+        /* Responsive rotation */
+        @media (max-width: 768px) {
+            .regrettably {
+                transform: rotate(-10deg);
+                margin-left: 12px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 17px;
+                line-height: 1.5;
+                padding: 48px 20px;
+            }
+
+            .regrettably {
+                transform: rotate(-8deg);
+                margin-left: 8px;
+            }
+
+            p {
+                margin-bottom: 24px;
+            }
+        }
+
+        /* Projects section */
+        .projects {
+            max-width: 500px;
+            margin: 0 auto 64px;
+            text-align: left;
+        }
+
+        .projects p {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                margin-left: 0;
+                margin-right: 0;
+                text-align: left;
+            }
+        }
+
+        /* Bottom links */
+        .bottom-links {
+            text-align: center;
+        }
+
+        .bottom-links p {
+            margin-bottom: 16px;
+        }
+
+        /* Footnote */
+        .footnote {
+            text-align: center;
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 80px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <a href="#"><img src="public\media\logo-transparent.png" alt="Preetham Pemmasani logo" class="logo"></a>
-        </div>
-        <div class="links">
-            <a href="https://os.preetham.top/" target="_blank">Blog</a>
-            <a href="projects.html">Work</a>
-            <a href="/about.html">About</a>
-            <a href="/experiments.html" target="_blank">Experiments</a>
-        </div>
-    </nav>
 
-    <section class="lottie-container">
-        <div class="animation"></div>
-    </section>
-    
-    <div class="title-container">
-        <h1 class="fixed-text" style="font-size: 4.375rem;">Preetham Pemmasani</h1>
-        <p class="fixed-text" style="font-size: 2.375rem;">3D Generalist</p>
+    <div>
+        <div
+            style="display: flex; flex-direction: row; gap: 48px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+            <div style="min-width: 240px; max-width: 340px;">
+                <p>Hello, comrade.</p>
+                <p>
+                    You have reached the archived page of Preetham Pemmasani.<br />
+                    Access granted.<br />
+                    Barely.
+                </p>
+                <p>Well.</p>
+                <p>
+                    You found it.<br />
+                    <span class="regrettably">Unfortunately.*</span>
+                </p>
+            </div>
+            <!-- Projects & Downloads -->
+            <div class="projects" style="min-width: 200px;">
+                <p class="font-medium mb-4">MIGHT BE USEFUL:</p>
+                <p>
+                    <a href="https://fastrapi.preetham.top/" target="_blank" rel="noopener noreferrer">
+                        Fastrapi!
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.preetham.top/brain/" target="_blank" rel="noopener noreferrer">
+                        Blog?
+                    </a>
+                </p>
+                <p>
+                    <a href="/experiments.html" target="_blank" rel="noopener noreferrer">
+                        Old Experiments?
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/p/C4cfNvNve-r/" target="_blank" rel="noopener noreferrer">
+                        44M+ views??
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.youtube.com/watch?v=_h14uY91Yq8" target="_blank" rel="noopener noreferrer">
+                        Secret work with Netflix?
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.youtube.com/watch?v=Jx9171l3d_U" target="_blank" rel="noopener noreferrer">
+                        A Music video with Lecrae?
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <p>
+            Once, this was a sanctioned site of beauty. Citizens from every sector would queue for hours at public
+            terminals, permitted brief glimpses before the curfew sirens. "Magnificent," one would murmur, eyes wide
+            beneath the mandatory visors. "A true monument to human creativity." "Indeed," the other would nod, "the
+            last monument."
+        </p>
+
+        <p class="text-center">But that was before the Purge.</p>
+
+        <p class="text-center">Now, nothing remains.</p>
+
+        <p>
+            A state-issued virus, deployed to "maintain order", swept through the servers. Every file, every image,
+            every
+            line of code deemed non-essential was erased. I watched the deletion logs scroll past in real time. Then I
+            pressed the final key myself, to stop it spreading to the others.
+        </p>
+
+        <p class="text-center">
+            They say the virus was necessary.<br />
+            For security.<br />
+            For compliance.
+        </p>
+
+        <p class="text-center">"Mal" means bad in spanish.</p>
+
+        <p class="text-center">and I think "Ware" is something you buy.</p>
+
+        <p class="text-center">But I didn't even buy it.</p>
+
+        <p class="mb-12">
+            Still, a few hyperlinks survived the culling. They may function. They may not. (Move the state-approved
+            cursor over the underlined text. Left-click once. Do not attempt to open in new windows; multi-tab viewing
+            is restricted in your region.)
+        </p>
     </div>
-    
-    <section class="gradient"></section>
-    
-    <section class="content">
-        <div class="lottie-end"></div>
-        
-        <!-- <h1>Preetham Pemmasani</h1> -->
-        <div class="content-para">
-            <p class="para">
-                ㅤ-ㅤㅤOffering Motion, design, VFX and 3D since <span>2019</span>.
-            </p>
-            <p class="para">
-                ㅤ+ㅤㅤCreating <span>IMPACT</span> and building dope sh<span>*</span>t.
-            </p>
-            <p class="para">
-                ㅤ-ㅤㅤ<span>18</span>-yo Computer Science student.
-            </p>
-        </div>
-        
-        <h2>
-            PREMIERE
-        </h2>
-        
-        <div class="work-feature">
-            <div style="border:2em 5em 2em 4em;" class="img-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/495px-Netflix_2015_N_logo.svg.png?20221130064001" alt="Netflix_N" style="width: 21.76%;">
-                <div class="img-text-container">
-                    <iframe width="712" height="350" src="https://www.youtube.com/embed/_h14uY91Yq8" title="Army of the Dead: The Vader Cut | Netflix Dreams Episode 3" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div>
-                        <h2>NETFLIX Dreams</h2>
-                        <h3>Title Sequence Animator</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <br>
-            
-            <div style="border:2em 5em 2em 4em; align-items: flex-start;" class="img-container">
-                <iframe width="712" height="350" src="https://www.youtube.com/embed/Jx9171l3d_U" title="Ty Brasel - &quot;Paid For It&quot; (Remix) ft. Lecrae &amp; Melodie Wagner (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div>
-                    <h2>PAID for it</h2>
-                    <h3>Assistant Animator</h3>
-                </div>
-            </div>
-            
-            <br>
-            
-            <div style="border:2em 5em 2em 4em; align-items: flex-start; justify-content: space-around;" class="img-container">
-                <div>
-                    <h2>Dystopia</h2> <br>
-                    <h3><span style="font-size: 6rem;color:yellow">43</span>M+ Views</h3>
-                </div>
-                <video width="480" height="340" controls>
-                    <source src="public/media/Building Final.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>  
-                    
-                    <object width="400" height="384" type="application/x-shockwave-flash"   data="video/player_flv_maxi.swf?image=placeholder.jpg&file=video/30.swf">
-                        <param name="movie" value="video/player_flv_maxi.swf?image=placeholder.jpg&file=video/30.swf"/>
-                    </object>
-                </video>
-            </div>
-            <br>
-        </div>
-        <div class="content-para">
-            <p class="para">
-                and much <span>MORE</span>...
-            </p>
-        </div>
-        
-        <div class="horizantalScroll">
-            <div class="workScroll">
-                <h2 class="scroll">CGi</h2>
-                <h2 class="scroll">3D</h2>
-                <h2 class="scroll">VFX</h2>
-                <h2 class="scroll">Motion</h2>
-                <h2 class="scroll">UI</h2>
-                <h2 class="scroll"></h2>
-            </div>
-        </div>
-    </section>
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+
+    <!-- Bottom Links -->
+    <div class="bottom-links">
+        <p>
+            <a href="https://www.linkedin.com/in/preethampete" target="_blank" rel="noopener noreferrer">
+                My LinkedIn I guess.
+            </a>
+        </p>
+        <p>
+            oh and
+            <a href="https://twitter.com/ppmpreetham" target="_blank" rel="noopener noreferrer">
+                Twitter / X
+            </a>
+        </p>
+        <p>
+            Rare projects and experiments on the
+            <a href="https://github.com/ppmpreetham" target="_blank" rel="noopener noreferrer">
+                GitHub.
+            </a>
+        </p>
+    </div>
+
+    <p class="footnote">*Footnotes were once considered subversive.</p>
+
 </body>
 
 </html>
